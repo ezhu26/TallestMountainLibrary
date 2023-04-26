@@ -10,7 +10,7 @@ var ascentYear = getColumn(url, 9);
 /**
 * takes a mountain name and returns the location
 *
-* @param mountain name {string} - the desired mountain
+* @param mountain name {string} - the desired mountain you want to use
 * @return mountain location {string} - the location of the mountain
 */
  
@@ -25,10 +25,12 @@ function getLocation(mountainName){
   }
    return "that is not a mountain name";
 }
-
-//takes mountain name and returns the parent mountain
-//mountain name {string} - the desired mountain
-//return {string} - the parent mountain
+/**
+*takes mountain name and returns the parent mountain
+*
+* @param mountain name {string} - the desired mountain you want to use
+* @return parent mountain {string} - the name of the parent mountain of the desired mountain
+*/
 function getParentMountain(mountainName){
   if(typeof mountainName !="string"){
     return "Please enter a string parameter";
@@ -41,10 +43,12 @@ function getParentMountain(mountainName){
    return "that is not a mountain name";
 }
 
-
-//takes a mountain name and returns the height in feet
-//mountain name {string} - the desired mountain
-//return {number} - the height of mountain
+/**
+*takes a mountain name and returns the height in feet
+*
+* @param mountain name {string} - the desired mountain you want to use
+* @return height in feet {number} - the height of desired mountain in feet
+*/
 
 function getHeightInFeet(mountainName){
   if(typeof mountainName !="string"){
@@ -59,10 +63,12 @@ function getHeightInFeet(mountainName){
 }
 
 
-
-//takes a range and returns a list of mountain names in that range
-//range {string} - the desired range
-//return {list} - the names of mountains in the range
+/**
+* takes a range and returns a list of mountain names in that range
+*
+* @param range {string} - the desired range you want to use
+* @return matches {list} - a list of the names of mountains in the desired range
+*/
 function getNamesInRange(range){
   if(typeof range !="string"){
     return "Please enter a string parameter";
@@ -79,9 +85,11 @@ function getNamesInRange(range){
     return matches;
 }
  
-
-//finds how many mountains that were ascended before 1950
-//return{number} how many mountains were ascended before 1950
+/**
+* finds how many mountains that were ascended before 1950
+*
+* @return count {number} a number how many mountains were ascended before 1950 in the list
+*/
 function getAscendedBefore(){
   var count = 0;
   for(var i in mountainNames){
