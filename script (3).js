@@ -7,10 +7,12 @@ var heightMeters = getColumn(url, 3);
 var mountainRange = getColumn(url, 6);
 var ascentYear = getColumn(url, 9);
 
-
-//takes a mountain name and returns the location
-//mountain name {string} - the desired mountain
-//return {string} - the location of the mountain
+/**
+* takes a mountain name and returns the location
+*
+* @param mountain name {string} - the desired mountain
+* @return mountain location {string} - the location of the mountain
+*/
  
 function getLocation(mountainName){
   if(typeof mountainName !="string"){
